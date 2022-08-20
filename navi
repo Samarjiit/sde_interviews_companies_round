@@ -1,0 +1,110 @@
+Some background about the company: Navi is a fintech startup, founded in 2018 by Sachin Bansal (also Founder of Flipkart) and Ankit Agrawal. Navi files a $440 Million IPO recently. So it is a dream company to be placed in.
+
+Compensation is quite good.
+Location is Bangalore.
+
+Round 1 | Aptitude + Coding : Time: 2 hrs | 48 questions | Divided in four sections
+
+Section 1 | Logical reasoning and Aptitude | 25 questions | 20 min: MCQ'S Based on topics like Profit-Loss, Mixtures, Ratios and Identities, Series Completion, Mirror Image etc
+
+Section 2 | Maths and Aptitude | 20 questions | 20 min: Aptitude questions with slightly more difficulty level
+
+Section 3 | 2 coding Questions | 50 min:
+Question 1 was easy problem based on basic DSU.
+Question 2 was medium problem based on BFS/DFS + backtracking. It was a bit tricky question, I could solve only partially.
+
+Section 4 | 1 coding Question | 30 min:
+Question was very easy problem based on simple BFS
+
+Round 2 | Problem solving and Data structures
+Around 8 student shortlisted, 45 mins round
+
+Interviewer was very friendly person having total 5 YOE with 1 year in NAVI. First he introduce himself then took my introduction. He started with couple of Easy problems to reverse a linked list and Linked List Cycle to make me confortable.
+Then he told me to design a HashSet
+I answerd him all three problems with two approaches each, he was quite satified with my explanation and didn't told me to code.
+Then he shared me a doc which has Problem Statement:
+Product SalesYou are given with an array Inventory where M suppliers are having their product for Sales with some profit for buyer. When one sale happens profit for that supplier is decreased by 1 and buyer can buy from supplier until profit on that product is 0. And you have to place N orders such that profit for buyer is maximum.
+
+TestCase 1: 
+Inventory = [1,2,3] , Orders = 3
+
+maximum Profit  = 7
+i.e 3+2+2
+
+TestCase 2:
+Inventory = [2, 5, 5, 8]
+
+maximum Profit = 8 + 7 + 6 + 5 + 5 + 5 + 4 + 4 = 44  
+I propose an approach which include Priorityqueue(max heap) which has time complexity approximately O(nlogn + mlogm), then he told me to optimize my approach.
+Then I came up with Greedy approach where I use Orderedmap to store profit as Key and frequency as value and iterate map of in reverse direction to place order with maximum Profit. This approach has time complexity of O(nlogn + m) (i.e. nlogn for insertion in map + m to retrive element of map).
+
+He agrees with my approach and told me to code it on Google docs. I took 10 min to execute and debug.
+He seems satisfied with my solution and then he ask me If I have any question to ask him?
+I asked 2 causal questions to know more about this Interview process and also asked him to give me feedback.
+
+Round 3 | Hiring Manegarial Round
+Around 4 students shortlisted | 45 mins
+
+Interview was overly critical geek passed out from IIT with 12 YOE in total. First he introduce himself then took my introduction in brief.
+He opend my Resume and had 2 min disscusion on achievement.
+Started Project discussion, he gave me the format to explain Project as
+
+Purpose of Project
+Tech Stack
+Contribution
+Major Challenges faced
+Implementation Details: Atleast four
+Results
+Scope of Improvement
+Tools detail | Similar tool comparision
+I explained in the same way but he wants to verify, so he opens the Project GitHub Link and App link(Deployed on Netlify) and we had detail dissusion for around 15 mins and he was well pleased.
+
+Asked details about my academic courses and I felt little embarrass as I was not able to remember some of my course names. But I smartly handle the situation.
+
+Asked to write SQL query on
+Employee Table
+with columns (empId, empName, Age, Salary) , empId is primary key
+Where one emp can have multiple entries
+Write a query to find sum of salary for each employees in desc order
+
+Select empId, empName, age, SUM(salary) from Employee
+Group By empId
+Order By  desc
+Add on condition: if empId is not primary key
+
+Select empId, empName,age,  SUM(salary) from Employee
+Group By 1,2,3
+Order By  desc
+Add on condition: if count entries is less than 3 for each emp
+
+Select empId, empName,age,  SUM(salary) from Employee
+Group By 1,2,3
+Order By  desc
+Having  3 > (select count(empId) from Employee 
+             Group by empId)
+Then he told me to Create Trigger
+I humbly told him that I am unaware to this concepts (I got little annoyed from his never ending extentions to problem).
+
+But every cloud has a silver lining
+Best Part
+
+Moving ahead to DSA, he share me Leetcode-Interview platform link. I haven't seem this platform before, but really liked it.
+
+He gave me Simplify Path and told me to solve within 15 mins as we were short on time. I was able to explain him my approach and solve it within 10 mins.
+
+As we had remaining time,
+he gave me one more problem Egg Dropping. I expalin him my intution and he backed me with some corner cases.
+And I was able to solve it (as it was known to me).
+
+
+Then he told me we had a smooth interview and asked if I had any question for him.
+I asked him for feedback and asked about company's work culture.
+
+.....................................................................................................................................................................
+
+Skills that I feel matter most during SDE interview:
+
+Coding
+Communication
+Project Knowledge
+Suject Knowlege ( DBMS, OOPs, OS)
